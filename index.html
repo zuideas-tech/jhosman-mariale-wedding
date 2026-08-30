@@ -175,7 +175,7 @@
             right: 25px;
             width: 54px;
             height: 54px;
-            background-color: var(--accent-blue);
+            background-color: #9C7750;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -194,17 +194,17 @@
         @keyframes twinkle {
             0% {
                 transform: scale(1);
-                box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-blue), transparent 40%);
+                box-shadow: 0 0 0 0 color-mix(in srgb, #9C7750, transparent 40%);
             }
 
             50% {
                 transform: scale(1.1);
-                box-shadow: 0 0 20px 10px color-mix(in srgb, var(--accent-blue), transparent 100%);
+                box-shadow: 0 0 20px 10px color-mix(in srgb, #9C7750, transparent 100%);
             }
 
             100% {
                 transform: scale(1);
-                box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-blue), transparent 100%);
+                box-shadow: 0 0 0 0 color-mix(in srgb, #9C7750, transparent 100%);
             }
         }
 
@@ -226,9 +226,9 @@
             display: inline-block;
             width: 100%;
             max-width: 260px;
-            background-color: #626b66;
+            background-color: #333A1A;
             color: white;
-            border: 1.5px solid #626b66;
+            border: 1.5px solid #333A1A;
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 0.15em;
@@ -342,7 +342,6 @@
     <div id="envelope-overlay" onclick="openEnvelope()">
         <video id="envelope-video" src="./assets/video/envelope_opening.mp4" muted playsinline preload="auto"></video>
         <div class="envelope-hint">
-            <i data-lucide="mail" size="22"></i>
             <p class="text-xs uppercase tracking-[0.2em] mt-2">Toca para abrir tu invitación</p>
         </div>
     </div>
@@ -450,12 +449,16 @@
                     momento en que decimos "Sí, para siempre".
                 </p>
 
-                <div class="border-t border-gray-200 pt-6">
-                    <p class="text-sm text-gray-600 mb-2">Ahora, con la bendición de Dios y nuestros padres:</p>
-                    <p class="text-sm text-gray-700">
+                <div class="border-l-4 border-[#20372a] bg-[#20372a]/5 pl-5 py-5 pr-4 mt-2">
+                    <p class="text-sm text-gray-600 mb-3">Ahora, con la bendición de Dios y nuestros padres:</p>
+                    <p class="text-sm text-gray-700 leading-relaxed">
                         <span class="italic">Padres de la novia:</span>
-                        <span class="font-semibold">Carolina Amorocho y Eugenio Amorocho</span>
+                        <span class="font-semibold text-[#20372a]">Carolina Amorocho y Eugenio Amorocho</span>
+                        <br>
+                        <span class="italic">Padres del novio:</span>
+                        <span class="font-semibold text-[#20372a]">Ana Medina y Fermín Quevedo</span>
                     </p>
+                    <p class="text-sm text-gray-600 italic mt-4">Nos encantaría que seas parte de este momento tan especial para nosotros.</p>
                 </div>
             </div>
         </div>
@@ -471,7 +474,7 @@
             </div>
 
             <h2 class="text-xl md:text-2xl italic leading-relaxed text-gray-700">
-                "¡Acompáñanos a escribir un nuevo capítulo!"
+                "Historias que se construyen taza a taza, abrazo a abrazo y con un toque de pelos dorados."
             </h2>
         </div>
         <div class="photo-slider">
@@ -502,7 +505,7 @@
     <!-- EVENTOS -->
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 px-6 pb-12">
         <div
-            class="bg-white p-8 text-center card-shadow border-t-4 border-[#20372a] flex flex-col items-center">
+            class="bg-white p-8 text-center card-shadow border-t-4 border-[#333A1A] flex flex-col items-center">
             <h3 class="text-xl italic tracking-wide">Ceremonia</h3>
             <div class="section-icon-prominent">
                 <svg width="80" height="80" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -532,16 +535,16 @@
                         fill="var(--icon-color)" transform="translate(72.8125,89.75)" />
                 </svg>
             </div>
-            <p class="text-sm text-gray-500 italic mb-1">Hora: 02:00 pm</p>
-            <p class="text-sm font-semibold mb-8">Iglesia Nuestra Señora del Rosario<br>
-                (al lado del Colegio San Luis)<br>
-                Mérida, Venezuela</p>
-            <a href="https://www.google.com/maps/place/Iglesia+Ntra.+Sra.+del+Rosario,+M%C3%A9rida+5101,+M%C3%A9rida,+Venezuela/@8.5944941,-71.1652815,17z/data=!3m1!4b1!4m6!3m5!1s0x8e648713e2e7a667:0xfbb2d7fb16280ca9!8m2!3d8.5944941!4d-71.1627066!16s%2Fg%2F11rs0lxb9?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
+            <p class="text-sm text-gray-500 italic mb-1">Hora: 04:00 pm</p>
+            <p class="text-sm font-semibold mb-8">Parroquia Universitaria Jesús Maestro<br>
+                Universidad De Los Andes<br>
+                La Hechicera, Mérida, Venezuela</p>
+            <a href="https://maps.app.goo.gl/8vEMJQj7HUL71e1t6?g_st=iw"
                 target="_blank" class="btn-gold-action">¿Cómo llegar?</a>
         </div>
 
         <div
-            class="bg-white p-8 text-center card-shadow border-t-4 border-[#20372a] flex flex-col items-center">
+            class="bg-white p-8 text-center card-shadow border-t-4 border-[#333A1A] flex flex-col items-center">
             <h3 class="text-xl italic tracking-wide">Celebración</h3>
             <div class="section-icon-prominent">
                 <svg width="80" height="80" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -572,17 +575,32 @@
                     <path fill="var(--icon-color)" transform="translate(358,74)" />
                 </svg>
             </div>
-            <p class="text-sm text-gray-500 italic mb-1">Hora: 04:00 pm</p>
-            <p class="text-sm font-semibold mb-8">Cabañas Mucuratay</p>
-            <a href="https://www.google.com/maps/place/Caba%C3%B1as+Mucuratay/@8.6400678,-71.0651669,17z/data=!3m1!4b1!4m9!3m8!1s0x8e6483bcd862fe45:0xbb16b2cdaf7c95db!5m2!4m1!1i2!8m2!3d8.6400678!4d-71.062592!16s%2Fg%2F1hhgkv6c5?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-gold-action">¿Cómo
+            <p class="text-sm text-gray-500 italic mb-1">Hora: 07:00 pm</p>
+            <p class="text-sm font-semibold mb-8">Quinta Piedecuesta <br>
+                La Pedregosa Media, frente al Hotel La Pedregosa <br>
+                Mérida, Venezuela.
+            </p>
+            <a href="https://maps.app.goo.gl/2qoiMriq36vsuZbY8?g_st=iw" target="_blank" class="btn-gold-action">¿Cómo
                 llegar?</a>
         </div>
     </div>
 
+    <!-- AVISO NIÑOS -->
+    <section class="relative w-full mb-12" style="aspect-ratio: 16 / 9;">
+        <img src="https://lh3.googleusercontent.com/d/1SYOAs69Ro0dTxElZF-R70NCsiXip4Agb" alt="Solo adultos y niños mayores de 7 años"
+            class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/45 flex items-center justify-center px-6">
+            <p class="serif italic text-white text-center text-base md:text-xl leading-relaxed max-w-2xl">
+                Amamos a sus pequeños, pero para que todos puedan disfrutar y bailar toda la noche, nuestro evento
+                será exclusivo para niños mayores de 7 años.
+            </p>
+        </div>
+    </section>
+
     <!-- DRESS CODE -->
     <div class="max-w-5xl mx-auto flex justify-center px-6 pb-12">
         <div
-            class="bg-white p-8 text-center card-shadow border-t-4 border-[#20372a] flex flex-col items-center">
+            class="bg-white p-8 text-center card-shadow border-t-4 border-[#333A1A] flex flex-col items-center">
             <h3 class="text-xl italic tracking-wide">Código de vestimenta</h3>
             <div class="section-icon-prominent">
                 <svg width="80" height="80" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -601,7 +619,7 @@
                 </svg>
             </div>
             <p class="text-sm text-gray-500 italic mb-8 max-w-[280px]">
-                ¡Queremos que te veas increíble y disfrutes con nosotros esta noche especial!
+                Formal. Para mantener la armonía de nuestro evento, agradecemos a nuestros invitados elegir cualquier color de su preferencia, exceptuando el blanco y el verde salvia.
             </p>
             <button onclick="showDressCodeModal()" class="btn-gold-action">Ver referencia</button>
         </div>
@@ -609,7 +627,7 @@
 
     <!-- RSVP -->
     <section id="rsvp" class="bg-[#fcfaf8] py-16 px-6">
-        <div class="max-w-md mx-auto bg-white p-8 card-shadow rounded-sm border-t-4 border-[#20372a]">
+        <div class="max-w-md mx-auto bg-white p-8 card-shadow rounded-sm border-t-4 border-[#333A1A]">
             <h2 class="text-xl italic text-center mb-6">Confirmar Asistencia</h2>
             <form id="rsvp-form" class="space-y-6">
                 <div>
@@ -638,10 +656,10 @@
         class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[2000] p-6 backdrop-blur-sm"
         onclick="hideDressCodeModal()">
         <div class="bg-white p-6 max-w-md w-full relative" onclick="event.stopPropagation()">
-            <h4 class="text-lg italic mb-4 text-center"><b>Semiformal</b></h4>
-            <img src="https://lh3.googleusercontent.com/d/1yDyRPYOV3en9OCg8fk0cbc_fdw6wW8jK"
+            <h4 class="text-lg italic mb-4 text-center"><b>Formal</b></h4>
+            <img src="https://lh3.googleusercontent.com/d/1aKwz2IJQRCwMQZXlEIH8eJOreJyhHy6L"
                 class="w-full h-auto rounded shadow-lg">
-            <button onclick="hideDressCodeModal()" class="btn-gold-action w-full mt-6">Cerrar</button>
+            <button onclick="hideDressCodeModal()" class="btn-gold-action block mx-auto mt-6">Cerrar</button>
         </div>
     </div>
 
