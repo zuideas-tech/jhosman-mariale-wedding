@@ -363,7 +363,8 @@
                 <div class="nos-casamos-line"></div>
             </div>
             <h1 class="text-5xl md:text-7xl mb-2 italic text-white">Jhosman & Mariale</h1>
-            <div class="divider"></div>
+            <!-- <div class="divider"></div> -->
+             <br><br>
             <p class="text-lg serif tracking-widest opacity-90 text-white">19 de Diciembre de 2026</p>
         </div>
 
@@ -535,7 +536,7 @@
                         fill="var(--icon-color)" transform="translate(72.8125,89.75)" />
                 </svg>
             </div>
-            <p class="text-sm text-gray-500 italic mb-1">Hora: 04:00 pm</p>
+            <p class="text-sm text-gray-500 italic mb-1">Hora: 03:30 pm</p>
             <p class="text-sm font-semibold mb-8">Parroquia Universitaria Jesús Maestro<br>
                 Universidad De Los Andes<br>
                 La Hechicera, Mérida, Venezuela</p>
@@ -591,6 +592,7 @@
             class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/45 flex items-center justify-center px-6">
             <p class="serif italic text-white text-center text-base md:text-xl leading-relaxed max-w-2xl">
+                Niños a dormir.
                 Amamos a sus pequeños, pero para que todos puedan disfrutar y bailar toda la noche, nuestro evento
                 será exclusivo para niños mayores de 7 años.
             </p>
@@ -703,14 +705,24 @@
         <div class="bg-white p-8 max-w-md w-full relative" onclick="event.stopPropagation()">
             <h4 class="text-lg italic mb-6 text-center">Datos Bancarios</h4>
             <div id="account-details" class="space-y-4 text-xs">
-                <div><span class="text-gray-400 block uppercase text-[9px]">Titular</span> Por definir</div>
-                <div><span class="text-gray-400 block uppercase text-[9px]">Cédula</span> Por definir</div>
-                <div><span class="text-gray-400 block uppercase text-[9px]">Banco</span> Por definir</div>
-                <div><span class="text-gray-400 block uppercase text-[9px]">Cuenta</span> Por definir</div>
-                <div><span class="text-gray-400 block uppercase text-[9px]">Teléfono</span> Por definir</div>
+                <div><span class="text-gray-400 block uppercase text-[9px]">Titular</span> Jhosman Quevedo</div>
+                <div><span class="text-gray-400 block uppercase text-[9px]">Cédula</span> 18.419.139</div>
+                <div><span class="text-gray-400 block uppercase text-[9px]">Banco</span> Mercantil</div>
+                <div><span class="text-gray-400 block uppercase text-[9px]">Cuenta</span> 0105 0674 3116 7408 6571</div>
+                <div><span class="text-gray-400 block uppercase text-[9px]">Teléfono</span> 0414 738 1337</div>
+
+                <div class="pt-4 border-t border-gray-100">
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Pago móvil</p>
+                    <div><span class="text-gray-400 block uppercase text-[9px]">Bancos</span> Mercantil / Provincial / Venezuela / Activo</div>
+                </div>
+
+                <div class="pt-4 border-t border-gray-100">
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-2">Zelle</p>
+                    <div><span class="text-gray-400 block uppercase text-[9px]">Correo</span> ajvr86@yahoo.com</div>
+                    <div class="mt-4"><span class="text-gray-400 block uppercase text-[9px]">Nombre</span> Alberto Villasmil</div>
+                </div>
             </div>
-            <button id="copy-btn" onclick="copyFullAccount()" class="btn-gold-action w-full mt-8">Copiar Datos de
-                Cuenta</button>
+            <button onclick="hideGiftModal()" class="btn-gold-action block mx-auto mt-8">Cerrar</button>
         </div>
     </div>
 
@@ -782,24 +794,6 @@
 
         function showGiftModal() { document.getElementById('gift-modal').style.display = 'flex'; }
         function hideGiftModal() { document.getElementById('gift-modal').style.display = 'none'; }
-
-        function copyFullAccount() {
-            const fullDetails = `Titular: Por definir\nBanco: Por definir\nCédula: Por definir\nTipo: Cuenta\nN°: Por definir`;
-            const el = document.createElement('textarea');
-            el.value = fullDetails;
-            el.setAttribute('readonly', '');
-            el.style.position = 'absolute';
-            el.style.left = '-9999px';
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-            const btn = document.getElementById('copy-btn');
-            const originalText = btn.innerText;
-            btn.innerText = '¡Copiado!';
-            setTimeout(() => { btn.innerText = originalText; }, 2000);
-        }
-
 
         document.getElementById('rsvp-form').addEventListener('submit', (e) => {
             e.preventDefault();
