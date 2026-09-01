@@ -685,6 +685,13 @@
         </div>
     </section>
 
+    <!-- PASE PERSONALIZADO -->
+    <section id="guest-pass" class="hidden bg-[#333A1A] px-6 py-14 text-center">
+        <p class="text-[10px] uppercase tracking-[0.3em] text-[#E5CD9F] mb-3">Invitación para</p>
+        <h2 id="guest-pass-name" class="serif italic text-2xl md:text-3xl text-white mb-2"></h2>
+        <p id="guest-pass-count" class="text-xs uppercase tracking-widest text-gray-300"></p>
+    </section>
+
     <!-- MODALES DE INFO -->
     <div id="dresscode-modal"
         class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[2000] p-6 backdrop-blur-sm"
@@ -792,6 +799,25 @@
 
         function showGiftModal() { document.getElementById('gift-modal').style.display = 'flex'; }
         function hideGiftModal() { document.getElementById('gift-modal').style.display = 'none'; }
+
+        // Personalización por invitado vía query params: ?nombre=Juan%20Perez&pases=2
+        (function initGuestPass() {
+            const params = new URLSearchParams(window.location.search);
+            const guestName = params.get('nombre');
+            const guestPasses = params.get('pases');
+
+            if (guestName) {
+                const section = document.getElementById('guest-pass');
+                document.getElementById('guest-pass-name').textContent = guestName;
+                document.getElementById('guest-pass-count').textContent = guestPasses
+                    ? `Pase para: ${guestPasses} persona${guestPasses == 1 ? '' : 's'}`
+                    : '';
+                section.classList.remove('hidden');
+
+                const formName = document.getElementById('form-name');
+                if (formName) formName.value = guestName;
+            }
+        })();
 
         document.getElementById('rsvp-form').addEventListener('submit', (e) => {
             e.preventDefault();
